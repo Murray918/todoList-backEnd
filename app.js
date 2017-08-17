@@ -52,7 +52,7 @@ app.post('/fire', function(req, res) {
   res.render('todo', {todos: todoListArray});
   // if (req.checkBody('todo')matches('todo')){
   //   alert('Please Enter a Todo.')
-  }
+  // }
   // console.log(nuObject);
 })
 
