@@ -3,24 +3,26 @@
 
     <div class="container">
 
-        <h1>add new</h1>
+        <h1>Add New</h1>
       <form class="newTodo" action="/fire" method="post">
         <input type="text" name="todo" value="todo">
-        <button type="button" name="button" >ADD</button>
+        <input type="submit" value="Submit"/>
       </form>
       <div>
         <div>
 
-          <h1>TODO BRoah</h1>
+          <h1>TODO BRUH</h1>
           {{#todos}}
           {{^completion}}
-        <form class="onList" action='/{{id}}' method="post">
+        <form class="onList" action='/results/{{id}}' method="post">
             <p>{{name}}
-        <button type="submit" name="markAsComplete" action='/crip'>Mark as Complete</button></p>
+        <input type="submit" name="markAsComplete" value='todo'>Mark as Complete</button></p>
         </form>
           {{/completion}}
+
+
           {{/todos}}
-          <h1>poopy</h1>
+          <h1>These Are Done</h1>
           {{#todos}}
           {{#completion}}
             {{name}}
