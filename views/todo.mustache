@@ -1,0 +1,34 @@
+</head>
+  <body>
+
+    <div class="container">
+
+        <h1>add new</h1>
+      <form class="newTodo" action="/fire" method="post">
+        <input type="text" name="todo" value="todo">
+        <button type="button" name="button" >ADD</button>
+      </form>
+      <div>
+        <div>
+
+          <h1>TODO BRoah</h1>
+          {{#todos}}
+          {{^completion}}
+        <form class="onList" action='/{{id}}' method="post">
+            <p>{{name}}
+        <button type="submit" name="markAsComplete" action='/crip'>Mark as Complete</button></p>
+        </form>
+          {{/completion}}
+          {{/todos}}
+          <h1>poopy</h1>
+          {{#todos}}
+          {{#completion}}
+            {{name}}
+            {{/completion}}</input>
+            <br>
+          {{/todos}}
+
+        </div>
+        <br>
+      </div>
+    </div>
