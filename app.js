@@ -2,26 +2,26 @@ const bodyParser = require('body-parser');
 const express = require('express')
 const mustacheExpress = require('mustache-express');
 const validator = require('express-validator');
-
+const todoListArray = require('./modles/modles')
 const app = express();
 
-const todoListArray = [{
-  'name': 'Learn Node Basics',
-  'completion': false,
-  'id': 0,
-}, {
-  'name': 'Learn Express Basics',
-  'completion': false,
-  'id': 1,
-}, {
-  'name': 'Learn Mustache',
-  'completion': false,
-  'id': 2,
-}, {
-  'name': 'Learn HTML forms with Express',
-  'completion': true,
-  'id': 3,
-}]
+// const todoListArray = [{
+//   'name': 'Learn Node Basics',
+//   'completion': false,
+//   'id': 0,
+// }, {
+//   'name': 'Learn Express Basics',
+//   'completion': false,
+//   'id': 1,
+// }, {
+//   'name': 'Learn Mustache',
+//   'completion': false,
+//   'id': 2,
+// }, {
+//   'name': 'Learn HTML forms with Express',
+//   'completion': true,
+//   'id': 3,
+// }]
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -32,6 +32,7 @@ app.use(validator());
 app.engine('mustache', mustacheExpress());
 app.set('views', './views')
 app.set('view engine', 'mustache')
+
 
 app.get('/', function(req, res) {
   // console.log(todoListArray);
